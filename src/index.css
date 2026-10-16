@@ -1,0 +1,10 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--bg:7 10 26;--fg:232 236 255;--card:18 24 52}
+.light{--bg:244 245 255;--fg:14 18 44;--card:255 255 255}
+body{@apply bg-bg text-fg font-sans antialiased;background-image:radial-gradient(60rem 30rem at 85% -10%,rgb(139 92 246/.25),transparent),radial-gradient(40rem 25rem at 0% 20%,rgb(34 211 238/.12),transparent);background-attachment:fixed}
+:focus-visible{outline:2px solid #22d3ee;outline-offset:2px}
+.btn{@apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 font-extrabold transition active:scale-95 bg-gradient-to-r from-violet-600 to-pink-500 text-white shadow-lg shadow-violet-600/30 hover:brightness-110}
+.btn2{@apply inline-flex items-center justify-center gap-2 rounded-xl px-3 py-2 font-semibold border border-fg/15 bg-card/60 hover:border-cyan-400 transition active:scale-95}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-4deg)}}
+.bob{animation:bob 3s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
